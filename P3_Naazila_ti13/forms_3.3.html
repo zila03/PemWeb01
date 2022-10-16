@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .navbar {background-color: #0c3b2e;
+      border-style: solid;
+      width: auto;}
+    .ul-navbar {display: flex;
+      list-style-type: none;
+      gap: 200px;}
+    li {padding: 1rem 5rem}
+    .content {display: flex;}
+    .gambar {padding: 40px 5px 5px 5px;}
+    img {border-radius: 25px;}
+    .form {padding: 50px 10px 10px 130px;}
+  </style>
+  <body style="background-color: #f1f0ec">
+    <div class="navbar">
+      <ul style="display: flex; list-style-type: none; gap: 10px">
+        <li>
+          <!-- Home -->
+          <a href="/" style="color:#ffba00">Home</a> |
+        </li>
+        <li>
+           <!--- General Link -->
+           <a href="/Generate Link" style="color:#ffba00">Generate Link</a> |
+        </li>
+        <li>
+          <!-- Transaction History -->
+          <a href="/Transaction History" style="color:#ffba00">Transaction History</a> |
+        </li>
+        <li>
+          <!-- Policy -->
+          <a href="/Policy" style="color:#ffba00">Policy</a> |
+        </li>
+        <li>
+           <!-- Logout -->
+           <a href="/Logout" style="color:#ffba00">Logout</a> |
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="gambar">
+        <img
+          src="https://www.converse.id/media/catalog/product/cache/144a401d4eb9f312744987a3cea154c3/C/O/CON166800C-1_1.jpg" width="300px"
+          alt=""
+        />
+        <br>
+        <input type="Submit" value="upload Picture">
+      </div>
+      <div class="form">
+        <table>
+          <tr>
+            <td><label for="title here">Title Here :</label></td>
+            <td>
+              <input
+                type="text"
+                required
+                id="title here"
+                placeholder="Converse RUN STAR HIKE LUGGED"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="description">Description :</label></td>
+            <td>
+              <textarea
+                type="text"
+                id="description"
+                placeholder="Year:2020        Model:        Condition:"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="account number">Account Number :</label></td>
+            <td>
+              <input
+                type="text"
+                required
+                id="account number"
+                placeholder="123-456-789-0"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="Bank">Bank :</label></td>
+            <td>
+              <select name="Bank" id="id_Bank" size="1">
+                <option selected>BSI</option>
+                <option>Mandiri</option>
+                <option>BTN</option>
+                <option>BRI</option>
+                <option>BCA</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="account holder">Account Holder :</label></td>
+            <td>
+              <input
+                type="text"
+                required
+                id="account holder"
+                placeholder="Name Hare"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Transaction">Transaction :</label></td>
+            <td><input type="number" min="1" max="6" id="Transaction"/></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="color: blue">
+              * if the transacation is for 3 person choose from the drop-down
+              list
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="color: blue">
+              <input type="checkbox" id="Red Sauce" checked="" />
+              <label for="white-sauce">Send to mobile phone</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td style="color: blue">
+              <input type="checkbox" id="Red Sauce" checked="" />
+              <label for="white-sauce">Send to Email</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Send to mobile phone">Send to mobile phone :</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                required
+                id="Send to mobile phone"
+                placeholder="1234567890"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Send to Email :</label></td>
+            <td>
+              <input
+                type="email"
+                required
+                id="email"
+                placeholder="Nurcahaya@gmail.com"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <a href="forms_3.4.html">
+                <input type="submit" 
+                style="background-color: #6d9773;color: white" 
+                value="Generate Nabr Link"/></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
