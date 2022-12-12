@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validation</title>
+	<style>
+		.container{
+			border: 1px solid black;
+			width: 35%;
+			position: fixed;
+			top: 10%;
+			left: 32%;
+			padding: 20px;
+		}
+		#span{
+			color: red;
+		}
+
+	</style>
+
+	<script>
+		function validate(){
+			var nama = document.getElementById("nama").value;
+			var email = document.getElementById("email").value;
+			var jam = document.getElementById("jam").value;
+			var tujuan = document.getElementById("tujuan").value;
+			var jml_tiket = document.getElementById("jml_tiket").value;
+			
+			if (nama && email && jam && tujuan && jml_tiket){
+    			document.getElementById("output").innerHTML = "Nama :" + nama + "<br>" + "Email : " + email + "<br>" + "Jam Keberangkatan : " + jam + "<br>" + "Tujuan : " + tujuan + "<br>" + "Jumlah Tiket : " + jml_tiket + "<br><br>" + "Selamat Travelling";
+			 	return true;
+			}else {
+    			alert("Data belum lengkap, Harap isi dengan benar");
+			}
+		}
+			
+		function maxlength(evt) {
+    		var panjangnama = document.getElementById("nama").value;
+
+    		if (panjangnama.length >20) {
+        		document.getElementById("error1").innerHTML = "Max length 20*";
+				document.getElementById("error1").style.color = "red";
+        	return false;
+    		}	
+		}
+
+		function validasiEmail(email) {
+
+    		if(email.indexOf("@")!=-1 && email.indexOf(".")!=-1){
+				return true;
+			} else {
+        		document.getElementById("error2").innerHTML = "Email tidak valid*";
+        		document.getElementById("error2").style.color = "red";
+    		}
+			
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<form name="form" method="post"></form>
+		Nama:	<input type="text" required="" maxlength="20" placeholder="Nama" id="nama" name="nama" onchange="maxlength()"><br>
+		<span id="error1"></span><br><br>
+		Email:	<input type="email" required="" placeholder="Email" id="email" name="email" onchange="validasiEmail(email.value)"><br>
+		<span id="error2"></span><br><br>
+		Jam Keberangkatan:	<input type="time" required="" placeholder="Jam Keberangkatan" id="jam" name="jam"><br>
+		<span id="error3"></span><br><br>
+		Tujuan Keberangkatan :	<input type="text"  placeholder="Tujuan Keberangkatan" id="tujuan" name="tujuan"><br>
+		<span id="error4"></span><br><br>
+		Jumlah Tiket	<input type="number" min="1" max="10" placeholder="Jumlah Tiket" id="jml_tiket" name="jml_tiket"><br>
+		<span id="error5"></span><br><br>
+		<button type="submit" onclick="return validate()">Submit</button>
+		<br><br>
+	</form>
+	<div id="output"></div>
+	</div>
+</body>
+</html>
