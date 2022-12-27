@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+header, footer, article, nav, aside{
+    padding: 1em;
+}
+nav{
+    background-color: #E8C4C4;
+    width: 20vw;
+}
+
+#content{
+    width: 80vw;
+}
+
+header,footer{
+    background-color: khaki;
+    height: 20vh;
+}
+
+#main{
+    display: flex;
+    flex: 1;
+    height: 60vh;
+}
+
+#main > article{
+    width: 60vw;
+}
+
+#main > aside{
+    background-color:#03DAC5;
+    width: 20vw;
+}
