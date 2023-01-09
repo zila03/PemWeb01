@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+      window.onload = ()=>{
+        this.sessionStorage.setItem("username", "admin");
+        this.sessionStorage.setItem("password", "12345")
+      }
+
+      var input = document.getElementsByName('input');
+      var login = document.getElementById('log-in');
+      var form = document.querySelector('form');
+      form.onsubmit = ()=>{return false}
+
+      Login.onclick = ()=>{
+        if((input[0].value != "") && (input[1].value != "")) {
+
+        }
+        else
+        {
+          if(input[0].value == "")
+          {
+            input[0].nextElementSibling.textContent = "Username tidak ada";
+            setTimeout(()=>{
+              input[0].nextElementSibling.textContent = "";
+            },2000);
+          }
+        }
+      }
+    </script>
+</head>
+<body>
+    <div class="container">
+      <div class="forms">
+        <div class="login-form">
+          <span class="title">Login</span>
+
+          <form action="#" method="post">
+            <div class="input-field">
+              <input type="text" name="username" placeholder="Masukan username" required>
+              <i class="uil uil-user icon"></i>
+            </div>
+              <div class="input-field">
+              <input type="password" name="password" placeholder="Masukan password" required>
+              <i class="uil uil-lock icon"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck">
+                <label for="logCheck" class="text">Ingatkan saya</label>
+              </div>
+
+              <a href="#" class="text">Lupa password?</a>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" id="log-in" value="Login">
+            </div>
+
+            <div class="login-signup">
+              <span class="text">Belum punya akun?</span>
+              <a href="registrasi.html" class="text signup-text">Registrasi sekarang</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
